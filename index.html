@@ -22,8 +22,10 @@
 </head>
 <body>
     <div class="video-container">
-        <video autoplay loop muted playsinline>
-            <source src="./background.mp4" type="video/mp4">
+        <video autoplay loop muted playsinline webkit-playsinline preload="auto">
+            <source src="background.mp4" type="video/mp4">
+            <!-- 태블로 엔진이 mp4를 못 읽을 경우를 대비해 추가 -->
+            브라우저가 비디오 태그를 지원하지 않습니다.
         </video>
     </div>
 </body>
