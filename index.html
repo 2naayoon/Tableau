@@ -1,39 +1,5 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tableau Background GIF</title>
-    <style>
-        /* 전체 화면 여백 제거 및 스크롤 방지 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .bg-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .bg-gif {
-            width: 100%;
-            height: 100%;
-            /* 핵심: GIF 비율을 유지하면서 화면에 꽉 채움 */
-            object-fit: cover;
-            display: block;
-        }
-    </style>
-</head>
-<body>
-    <div class="bg-container">
-        <!-- 파일명이 background.gif인지 다시 한번 확인해주세요 -->
-        <img src="./background.gif" alt="background" class="bg-gif">
-    </div>
-</body>
-</html>
+<video autoplay loop muted playsinline webkit-playsinline preload="auto">
+    <source src="background.mp4" type="video/mp4">
+    <!-- 태블로 엔진이 mp4를 못 읽을 경우를 대비해 추가 -->
+    브라우저가 비디오 태그를 지원하지 않습니다.
+</video>
