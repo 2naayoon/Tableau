@@ -1,5 +1,48 @@
-<video autoplay loop muted playsinline webkit-playsinline preload="auto">
-    <source src="background.mp4" type="video/mp4">
-    <!-- 태블로 엔진이 mp4를 못 읽을 경우를 대비해 추가 -->
-    브라우저가 비디오 태그를 지원하지 않습니다.
-</video>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 태블로 내부 브라우저 호환성을 위해 뷰포트 고정 -->
+    <meta name="viewport" content="width=1366, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tableau Fixed Background</title>
+    <style>
+        /* 모든 기본 여백 및 스크롤바 제거 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -ms-overflow-style: none; /* IE/Edge 스크롤바 숨김 */
+            scrollbar-width: none;    /* Firefox 스크롤바 숨김 */
+        }
+        
+        ::-webkit-scrollbar { display: none; } /* Chrome/Safari 스크롤바 숨김 */
+
+        body, html {
+            width: 1366px;
+            height: 2000px;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .bg-container {
+            width: 1366px;
+            height: 2000px;
+            overflow: hidden;
+        }
+
+        .bg-gif {
+            width: 100%;
+            height: 100%;
+            /* 1366*2000 비율에 딱 맞게 채움 */
+            object-fit: fill; 
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-container">
+        <!-- 절대 경로 사용 권장 (검은 화면 방지) -->
+        <img src="./background.gif" alt="background" class="bg-gif">
+    </div>
+</body>
+</html>
